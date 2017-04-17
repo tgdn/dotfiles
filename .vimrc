@@ -1,3 +1,5 @@
+let mapleader = ","
+
 set nocompatible
 "set number
 set relativenumber
@@ -8,6 +10,23 @@ set encoding=utf-8
 set t_Co=256
 set ic
 set ruler
+
+" ##### Buffers #####
+" Allows buffers to be hidden if a buffer has been modified
+set hidden
+
+" To open new empty buffer
+nmap <Leader>t :enew<CR>
+
+" Next buffer
+nmap <Leader>l :bnext<CR>
+nmap <Leader>h :bprevious<CR>
+nmap <Leader>bq :bp <BAR> bd #<CR>
+nmap <Leader>bl :ls<CR>
+
+" Splits
+nmap <Leader>% :vsplit<CR>
+nmap <Leader>" :split<CR>
 
 syntax on
 filetype on
@@ -58,8 +77,17 @@ endif " has("autocmd")
 set laststatus=2
 set ttimeoutlen=50
 
+let g:airline_theme='badwolf'
 let g:airline_powerline_fonts = 1
+
+" Extensions
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 call plug#begin()
 Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'jmcantrell/vim-virtualenv'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
