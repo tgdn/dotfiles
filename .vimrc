@@ -10,6 +10,7 @@ set encoding=utf-8
 set t_Co=256
 set ic
 set ruler
+set clipboard=unnamed
 
 " ##### Buffers #####
 " Allows buffers to be hidden if a buffer has been modified
@@ -17,6 +18,8 @@ set hidden
 
 " To open new empty buffer
 nmap <Leader>t :enew<CR>
+nmap <Leader>nh :new<CR>
+nmap <Leader>nv :vnew<CR>
 
 " Next buffer
 nmap <Leader>l :bnext<CR>
@@ -54,20 +57,6 @@ color dracula
 " Leave editor with Ctrl-q : Write all changed buffers and exit Vim
 nmap <C-q>     :wqa<CR>
 
-" autocomplete parenthesis, brackets and braces
-"inoremap ( ()<Left>
-"inoremap [ []<Left>
-"inoremap { {}<Left>
-"
-"vnoremap ( s()<Esc>P<Right>%
-"vnoremap [ s[]<Esc>P<Right>%
-"vnoremap { s{}<Esc>P<Right>%
-
-" autocoplete quotes (visual and select mode)
-xnoremap ' s''<Esc>P<Right>
-xnoremap " s""<Esc>P<Right>
-xnoremap ` s``<Esc>P<Right>
-
 " Change the working directory to the directory containing the current file
 if has("autocmd")
     autocmd BufEnter * :lchdir %:p:h
@@ -90,4 +79,5 @@ Plug 'scrooloose/nerdtree'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
