@@ -1,0 +1,6 @@
+[submodule "go/src/github.com/tgdn/tketlist/client-ts/Semantic-UI"]
+	path = go/src/github.com/tgdn/tketlist/client-ts/Semantic-UI
+	url = git@github.com:Semantic-Org/Semantic-UI.git
+[submodule "go/src/github.com/tgdn/tketlist/client-ts/src/static/vendor/Semantic-UI"]
+	path = go/src/github.com/tgdn/tketlist/client-ts/src/static/vendor/Semantic-UI
+	url = git@github.com:Semantic-Org/Semantic-UI.git
